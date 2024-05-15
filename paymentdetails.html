@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 300px;
+            padding: 8px;
+            margin-bottom: 15px;
+        }
+
+        #total {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        #confirmPaymentBtn {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Enter Payment Details</h2>
+    <form id="paymentDetailsForm">
+        <label for="firstName">Enter First Name:</label>
+        <input type="text" id="firstName" required>
+
+        <label for="lastName">Enter Last Name:</label>
+        <input type="text" id="lastName" required>
+
+        <label for="email">Enter Email Address:</label>
+        <input type="email" id="email" required>
+
+        <label for="confirmEmail">Confirm Email Address:</label>
+        <input type="email" id="confirmEmail" required>
+
+        <label for="cardNumber">Enter Card Number:</label>
+        <input type="text" id="cardNumber" required>
+
+        <label for="sortCode">Enter Sort Code:</label>
+        <input type="text" id="sortCode" required>
+
+        <label for="securityCode">Enter Security Code:</label>
+        <input type="text" id="securityCode" required>
+
+        <label>Total Price:</label>
+        <div id="total">£0.00</div>
+
+        <a href="index.html"><button type="button" id="confirmPaymentBtn" onclick="confirmPayment()">Confirm Payment</button></a>
+    </form>
+
+    <script>
+        // Dummy function to simulate payment confirmation
+        function confirmPayment() {
+            // In a real-world scenario, you would perform actual payment processing here.
+            alert("Payment confirmed! Thank you for your purchase.");
+        }
+
+        // Dummy function to get the total from the previous screen
+        function getPreviousTotal() {
+            // Replace this with the actual logic to fetch the total from the previous page or storage.
+            return '£' + (Math.random() * 100).toFixed(2);
+        }
+
+        // Set the total from the previous screen on page load
+        document.getElementById("total").innerText = getPreviousTotal();
+    </script>
+</body>
+</html>

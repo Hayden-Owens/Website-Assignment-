@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        select, input {
+            width: 200px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        #total {
+            font-weight: bold;
+        }
+
+        #proceedBtn {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Membership and Dinner Ticket Order</h2>
+    <form id="paymentForm">
+        <label for="membership">Select Membership:</label>
+        <select id="membership" onchange="calculateTotal()">
+            <option value="150.00">Silver Ticket Membership (£150.00)</option>
+            <option value="250.00">Gold Ticket Membership (£250.00)</option>
+            <option value="350.00">Platinum Ticket Membership (£350.00)</option>
+            <option value="35.00">Single Season Pass (£35.00)</option>
+            <option value="100.00">Day Pass (£100.00)</option>
+        </select>
+
+        <label for="addDinner">Add Additional Dinner Ticket (£125.00):</label>
+        <input type="checkbox" id="addDinner" onchange="calculateTotal()">
+
+        <label>Total:</label>
+        <div id="total">£0.00</div>
+
+        <a href="paymentdetails.html"><button type="button" id="proceedBtn" onclick="proceedToPayment()">Proceed to Payment Details</button></a>
+    </form>
+
+    <script>
+        function calculateTotal() {
+            var membershipPrice = parseFloat(document.getElementById("membership").value);
+            var additionalDinnerPrice = document.getElementById("addDinner").checked ? 125.00 : 0.00;
+            var total = membershipPrice + additionalDinnerPrice;
+
+            document.getElementById("total").innerText = '£' + total.toFixed(2);
+        }
+
+        function proceedToPayment() {
+            // In a real-world scenario, you would handle payment processing here.
+            alert("Redirecting to payment details...");
+            // You may want to submit the form to a server-side script for further processing.
+            // document.getElementById("paymentForm").submit();
+        }
+    </script>
+</body>
+</html>

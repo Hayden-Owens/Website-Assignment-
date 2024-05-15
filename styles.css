@@ -1,0 +1,747 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black
+}
+
+nav{
+    background: rgba(0, 0, 0, 0.711);
+    color: white;
+    display: flex;
+    align-items: bottom;
+    justify-content: space-between;
+    border-bottom: 10px white;
+    
+}
+
+nav .mainMenu{
+    display: flex;
+    list-style: none;
+}
+
+nav .mainMenu li a{
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.3rem;
+    
+}
+
+nav .mainMenu li a:hover{
+    background: antiquewhite;
+    color: black;
+    transition: ease-in-out 0.6s;
+    border-radius: 10px;
+    opacity: 0.9;
+
+}
+
+nav .openMenu {
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+nav .mainMenu .closeMenu, 
+.icons i{
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+.fa-facebook:hover{color: rgb(255, 177, 75);}
+.fa-twitter:hover{color: rgb(255, 177, 75);}
+.fa-instagram:hover{color: rgb(255, 177, 75);}
+
+@media(max-width: 800px){
+    nav .mainMenu{
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: black;
+        transition: top 1s ease 0s;
+        display: none;
+    }
+    nav .mainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    nav .openMenu{
+        display: block;
+    }
+    nav .mainMenu li a:hover {
+        background: none;
+        color: antiquewhite;
+        font-size: 1.6rem;
+
+    }
+    .icons i {
+        display: inline-block;
+        padding: 12px;
+
+    }
+    .timehead {
+        margin: 45px;
+    }
+    .time{
+        margin: 2px;
+    }
+    .time h2{
+        font-size: 10px;
+
+    }
+    .time small{
+        font-size: 8px;
+    }
+}
+
+.LogoPic{
+    width: 150px;
+    display: inline-block;
+    align-self: bottom;
+}
+
+.LogoPic:hover {
+    transform: scale(1.1);
+    transition: ease-in-out 0.3s;
+}
+
+.spacetime{
+    margin-top: 50px;
+    background-image: url("Images/Backgrounds/best4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: black;
+    height: 500px;
+    margin-left: 18px;
+    margin-right: 18px;
+    border-radius: 50px;
+    padding-top: 130px;
+}
+
+
+.timehead {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 125px;
+    color: rgb(245, 245, 245);
+    outline: black;
+    outline-width: 10px;
+    text-decoration: overline;
+    text-emphasis-color: black;
+    text-emphasis: 3px;
+    text-shadow: 2px 2px 2px black;
+    text-transform: uppercase;
+    margin: 0; 
+}
+
+.countdown {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 5px; /* Adjust this value to your preference */
+    padding-bottom: 50px;
+    color: whitesmoke;
+    text-shadow: 2px 2px 2px black;
+    margin: 0; /* Remove default margin */
+}
+
+.opaque-box {
+    background-color: rgba(0, 0, 0, 0.525);
+    border: 2px solid white;
+    padding: 20px; 
+}
+
+
+.timehead, .countdown {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%; 
+    max-width: 600px; /* Set a maximum width if needed */
+}
+
+
+
+.time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+    padding: 10px;
+    color: whitesmoke;
+    outline: black;
+    text-shadow: 2px 2px 2px black;
+    text-transform: uppercase;
+    text-size-adjust: 2px; 
+}
+
+.time h2{
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1;
+    margin: 0 0 5px;
+    color: whitesmoke;
+    outline: black;
+    text-shadow: 2px 2px 2px black;  
+}
+
+
+div.carousel {
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.pic1 {
+    width: 700px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newsBox {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: rgba(255, 255, 255, 0);
+    height: 700px;
+    padding-top: 50px;
+    border: 1px solid white;
+}
+
+
+.newsHeader {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    display: inline-block;
+    padding: 20px;
+    margin: 50px;
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration-style: double;
+    background: rgba(255, 255, 255, 0.168)
+}
+
+h1.newsHeader {
+    margin-top: 0;
+}
+
+.newsHeadlines {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+
+}
+
+.articles {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 3px;
+    padding: 20px;
+    flex: 1;
+    margin: 20px;
+
+}
+
+.articles:hover {
+    background: rgba(245, 245, 245, 0.099);
+    transition: ease-in-out 1s;
+    color: black;
+}
+
+p {
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    color: white;
+}
+
+h2 {
+    padding-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.mapsSection {
+    border: 2px solid white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: rgba(255, 255, 255, 0);
+    height: 700px;
+    padding-top: 50px;
+    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.266);
+
+}
+
+.findus {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    display: inline-block;
+    padding: 20px;
+    margin: 20px;
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration-style: double;
+}
+
+p.Address {
+    border: 1px solid white;
+    border-radius: 3px;
+    display: inline-block;
+    flex-direction: row;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    padding: 20px;
+    margin: 20px;
+}
+
+p.googleMaps {
+    display: inline;
+    flex-direction: row;
+    margin-left: 400px;
+    margin-bottom: 150px;
+}
+
+footer {
+    background-color: #ffffff2a;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.register-interest,
+.social-icons,
+.copyright,
+.footer-links {
+    margin: 10px;
+}
+
+.register-interest a,
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons a {
+    font-size: 20px;
+    margin-right: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #ffa200; /* Change color on hover as needed */
+}
+
+h1.about {
+    color: white;
+    border: black 1px solid;
+    border-radius: 3px;
+    padding: 20px;
+    margin-left: 150px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: inline-block;
+    text-decoration: overline;
+    text-transform: uppercase;
+}
+
+.centre-wrap1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: row;
+    max-width: 1000px;
+    margin: 20px;
+    padding: 50px;
+}
+
+.mainContent {
+    flex: 3;
+}
+
+.mainContent p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    max-width: 100%; /* Change to 100% to take full width of .mainContent */
+}
+
+.conferencePic {
+    display: flex;
+    flex-direction: row;
+}
+
+.conferencePic img {
+    width: 300px;
+    height: auto;
+    margin-left: 20px; /* Add some margin for spacing */
+}
+
+.Container3 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 150px;
+}
+
+.leftBox,
+.rightBox {
+    width: 48%; /* Adjust the width as needed */
+    border: 2px solid white;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.leftBox:hover,
+.rightBox:hover {
+    transform: scale(1.05); /* Scale on hover */
+    transition-duration: 1s;
+    color: white; /* Text color on hover */
+    background-color: black; /* Background color on hover */
+}
+
+h2 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold; 
+}
+
+p {
+    color: white; 
+}
+
+.rightBox {
+    background-color: black; /* Initial background color */
+}
+
+.ticketHead {
+    display: inline-block;
+    color: whitesmoke;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 630px;
+    border: 2px solid whitesmoke;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.018);
+    padding: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    text-decoration: overline;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.imageGrid {
+    display: grid;
+    max-width: 1200px;
+    margin: 40px auto; /* Center the element horizontally with auto margin */
+    grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+    gap: 40px; /* Adjust the gap as needed */
+    text-align: center; /* Center-align text within each grid cell */
+}
+
+
+/* Style for each image */
+.imageGrid img {
+    width: 100%; /* Make the images fill the width of their container */
+    height: 100%; /* Make the images fill the height of their container */
+    object-fit: cover;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: all 0.6s ease-in-out;
+    opacity: 0.5;
+}
+
+.imageGrid img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.imageGrid div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.introComp {
+    display: inline-block;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: whitesmoke;
+    border: 1px solid white;
+    background-color: black;
+    margin: 20px;
+    margin-left: 630px;
+}
+
+.GridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 50px;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    transition: background-color 1s;
+}
+
+.grid-content {
+    position: relative;
+}
+
+.grid-item:hover {
+    background-color: #ccc;
+    color: #ccc;
+}
+
+.grid-item:hover .image-title {
+    background-color: grey;
+    color: white;
+}
+
+.grid-item:hover .hidden-paragraph {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    z-index: 1;
+    transition: background-color 0.3s, color 0.3s, opacity 0.3s; /* Add opacity transition */
+    opacity: 1; /* Initially visible */
+}
+
+.grid-item:hover .image-title {
+    background-color: grey;
+    color: white;
+    opacity: 0; /* Disappear on hover */
+}
+
+.hidden-paragraph {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(42, 42, 42);
+    color: white;
+    border: 2px solid white;
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s, transform 1s;
+}
+
+.headerInfo {
+    padding: 20px;
+    border: white 1px solid;
+    margin: 20px;
+    text-transform: uppercase;
+    display: inline-block;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.containerInfo {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #231f1f;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.containerInfo h1 {
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.events {
+    margin-bottom: 20px;
+}
+
+.events h2 {
+    font-size: 20px;
+    color: #ff9900;
+    margin-bottom: 10px;
+}
+
+.events p {
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.presentNav-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.presentNav-container button {
+    background-color: #0066cc;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.presentNav-container button:hover {
+    background-color: #004080;
+}
+
+.presentNav-container a {
+    text-decoration: none;
+}
+
+.presentNav-container a:hover {
+    text-decoration: underline;
+}
+
+.headerInfo {
+    color: #333;
+}
+
+.disabledContainer {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    margin-bottom: 150px;
+}
+
+
+.registerFormContainer {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    background-color: #222;
+    margin-bottom: 150px;
+}
+
+h1 {
+    text-align: center;
+    color: #ff8c00; 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #444;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: #ff8c00; /* orange/yellow color */
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffaa33; /* lighter shade of orange/yellow */
+}
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
